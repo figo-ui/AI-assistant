@@ -1,0 +1,1 @@
+C:\Users\hp\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'C:\\Users\\hp\\Desktop\\AI assistant\\backend\\backend\\scripts\\step3_train_triage_v2.py': [Errno 2] No such file or directory

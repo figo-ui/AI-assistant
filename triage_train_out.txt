@@ -1,0 +1,83 @@
+
+======================================================================
+  Loading Data
+======================================================================
+Train: 42,387, Val: 9,083, Test: 9,083
+Classes: 115
+
+======================================================================
+  Vectorizing (TF-IDF word 1-2gram)
+======================================================================
+Word TF-IDF shape: (42387, 6662), time: 166.1s
+Char TF-IDF shape: (42387, 8277), time: 273.7s
+Combined shape: (42387, 14939)
+
+======================================================================
+  Model A: SGD (modified_huber) — word TF-IDF
+======================================================================
+Time: 60.0s | Train F1: 0.7033 | Val F1: 0.5899 | Test F1: 0.5908 | Gap: 0.1134
+
+======================================================================
+  Model B: SGD (modified_huber) — word+char TF-IDF
+======================================================================
+Time: 142.0s | Train F1: 0.6914 | Val F1: 0.5843 | Test F1: 0.5879 | Gap: 0.1071
+
+======================================================================
+  Model C: LinearSVC — word+char TF-IDF
+======================================================================
+Time: 1222.8s | Train F1: 0.7320 | Val F1: 0.5871 | Test F1: 0.5939 | Gap: 0.1449
+
+======================================================================
+  Model D: LinearSVC C=1.0 — word+char TF-IDF
+======================================================================
+Time: 1419.9s | Train F1: 0.7383 | Val F1: 0.5789 | Test F1: 0.5778 | Gap: 0.1595
+
+======================================================================
+  Model Selection
+======================================================================
+
+Model                          | Val F1  | Test F1 | Train F1 | Gap
+----------------------------------------------------------------------
+  SGD word-only                | 0.5899  | 0.5908  | 0.7033   | 0.1134
+  SGD word+char                | 0.5843  | 0.5879  | 0.6914   | 0.1071
+  LinearSVC C=0.3              | 0.5871  | 0.5939  | 0.7320   | 0.1449
+  LinearSVC C=1.0              | 0.5789  | 0.5778  | 0.7383   | 0.1595
+
+Best model: SGD word-only
+  Val Macro F1:  0.5899
+  Test Macro F1: 0.5908
+  Baseline:      0.7709
+  Improvement:   -0.1810
+
+======================================================================
+  Saving Best Triage Model
+======================================================================
+Saved: text_classifier.joblib, tfidf_vectorizer.joblib, tfidf_char_vectorizer.joblib
+Saved: text_labels.json (115 classes)
+Saved: text_training_metrics.json
+
+======================================================================
+  Per-Class Report (Best Model — Val Set)
+======================================================================
+Worst 10 classes by F1:
+  Cluster headache                                       : 0.0206
+  Scombroid food poisoning                               : 0.0247
+  URTI                                                   : 0.0667
+  Whooping cough                                         : 0.0702
+  Respiratory System Diagnosis W Ventilator Support >96 Hours: 0.0741
+  Localized edema                                        : 0.0854
+  Acute Rhinosinusitis                                   : 0.0860
+  Allergic Sinusitis                                     : 0.0879
+  Bronchospasm / acute asthma exacerbation               : 0.1094
+  Pulmonary neoplasm                                     : 0.1163
+Best 10 classes by F1:
+  Malignant Neoplasm Of Breast (Disorder)                : 1.0000
+  Myocardial Infarction                                  : 1.0000
+  Neoplasm Of Prostate                                   : 1.0000
+  Non-Small Cell Lung Cancer (Disorder)                  : 1.0000
+  Pulmonary Emphysema (Disorder)                         : 1.0000
+  Respiratory Distress (Finding)                         : 1.0000
+  Sarcoidosis                                            : 1.0000
+  Sudden Cardiac Death                                   : 1.0000
+  Suspected Covid-19                                     : 1.0000
+  Viral Sinusitis (Disorder)                             : 1.0000

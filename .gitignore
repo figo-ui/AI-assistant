@@ -1,0 +1,76 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Django ───────────────────────────────────────────────────────────────────
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+backend/media/
+
+# ─── Secrets — NEVER commit real .env ─────────────────────────────────────────
+.env
+!.env.example
+backend/.env
+!backend/.env.example
+
+# ─── ML model binaries (large — host separately or use Git LFS) ───────────────
+backend/models/*.joblib
+backend/models/*.pt
+backend/models/*.keras
+backend/models/*.h5
+backend/models/*.onnx
+backend/models_min5/*.joblib
+
+# ─── Training data (large — not part of source delivery) ──────────────────────
+data/raw/
+data/processed/
+data/unified/
+data/dataset_hub/
+data/meta/
+data/dataset_v1.0/
+
+# ─── Large binary array files ─────────────────────────────────────────────────
+*.npy
+*.npz
+*.parquet
+*.feather
+*.arrow
+
+# ─── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ─── OS / Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+triage_train_err.txt

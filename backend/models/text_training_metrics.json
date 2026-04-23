@@ -1,0 +1,34 @@
+{
+  "model_name": "SGD (word+char)",
+  "train_macro_f1": 0.6991,
+  "val_macro_f1": 0.5887,
+  "test_macro_f1": 0.5906,
+  "val_accuracy": 0.5948,
+  "classes": 115,
+  "train_samples": 42387,
+  "val_samples": 9083,
+  "test_samples": 9083,
+  "baseline_macro_f1": 0.7709,
+  "improvement": -0.1822,
+  "vectorizer_mode": "combined",
+  "all_models": [
+    {
+      "name": "LR (word TF-IDF)",
+      "val_f1": 0.5799,
+      "test_f1": 0.5791,
+      "train_f1": 0.706
+    },
+    {
+      "name": "LinearSVC+Cal (word+char)",
+      "val_f1": 0.5808,
+      "test_f1": 0.586,
+      "train_f1": 0.7354
+    },
+    {
+      "name": "SGD (word+char)",
+      "val_f1": 0.5887,
+      "test_f1": 0.5906,
+      "train_f1": 0.6991
+    }
+  ]
+}

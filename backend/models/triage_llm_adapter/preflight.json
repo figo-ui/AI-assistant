@@ -1,0 +1,9 @@
+{
+  "python": "3.10.11",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "ram_gb": 7.88,
+  "cuda_available": false,
+  "cuda_device_count": 0,
+  "transformers_no_torchvision": "1"
+}

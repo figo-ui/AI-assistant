@@ -1,0 +1,18 @@
+{
+  "dataset": "..\\data\\synthea_case_submissions.csv",
+  "rows_evaluated": 2963,
+  "classes_evaluated": 8,
+  "accuracy_top1": 0.7567,
+  "macro_f1_top1": 0.0968,
+  "top3_accuracy": 0.7604,
+  "negative_log_likelihood": 3.6155,
+  "brier_score": 0.9618,
+  "expected_calibration_error": 0.7251,
+  "confusion_matrix_csv": "models\\evaluation\\text_confusion_matrix.csv",
+  "clinician_review_placeholder_csv": "models\\evaluation\\clinician_review_placeholder.csv",
+  "notes": [
+    "Evaluation rows were filtered to labels present in the trained model artifacts.",
+    "This is a held-out external-style evaluation only if the dataset source differs from training.",
+    "Clinician review CSV is a placeholder workflow artifact and not completed validation."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "model_name": "SGD modified_huber",
+  "train_macro_f1": 1.0,
+  "val_macro_f1": 0.9982,
+  "test_macro_f1": 0.9989,
+  "val_accuracy": 0.9994,
+  "test_accuracy": 0.9991,
+  "intent_classes": 15,
+  "train_samples": 11314,
+  "val_samples": 1617,
+  "test_samples": 3233,
+  "baseline_macro_f1": 0.9763,
+  "baseline_accuracy": 0.9994,
+  "improvement_f1": 0.0219,
+  "all_models": [
+    {
+      "name": "LinearSVC C=1.0",
+      "val_f1": 0.9982,
+      "test_f1": 0.9986,
+      "val_acc": 0.9994
+    },
+    {
+      "name": "LinearSVC C=5.0",
+      "val_f1": 0.9982,
+      "test_f1": 0.9999,
+      "val_acc": 0.9994
+    },
+    {
+      "name": "SGD modified_huber",
+      "val_f1": 0.9982,
+      "test_f1": 0.9989,
+      "val_acc": 0.9994
+    }
+  ]
+}

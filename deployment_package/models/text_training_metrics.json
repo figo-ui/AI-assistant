@@ -1,0 +1,14 @@
+{
+  "model_name": "SGD alpha=1e-4",
+  "train_macro_f1": 0.9102,
+  "val_macro_f1": 0.8967,
+  "test_macro_f1": 0.8831,
+  "val_accuracy": 0.8786,
+  "test_accuracy": 0.8725,
+  "classes": 73,
+  "train_samples": 24366,
+  "val_samples": 5221,
+  "test_samples": 5222,
+  "baseline_macro_f1": 0.7709,
+  "improvement": 0.1258
+}

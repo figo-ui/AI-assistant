@@ -1,0 +1,19 @@
+{
+  "dataset": "dermamnist_28",
+  "architecture": "improved_dermcnn",
+  "train_samples": 7007,
+  "val_samples": 1003,
+  "test_samples": 2005,
+  "classes": 7,
+  "train_macro_f1": 0.4952,
+  "best_val_macro_f1": 0.4741,
+  "test_macro_f1": 0.449,
+  "train_accuracy": 0.5864,
+  "val_accuracy": 0.5783,
+  "test_accuracy": 0.5796,
+  "image_input_size": 28,
+  "baseline_test_f1": 0.307,
+  "baseline_test_acc": 0.5022,
+  "improvement_f1": 0.142,
+  "improvement_acc": 0.0774
+}

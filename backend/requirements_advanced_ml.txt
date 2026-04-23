@@ -1,0 +1,12 @@
+xgboost==2.1.4
+datasets==4.6.1
+huggingface-hub==0.31.2
+pyarrow==23.0.1
+transformers==4.51.3
+peft==0.18.1
+accelerate==1.13.0
+# Optional vector search (RAG). Install only if supported on your platform.
+faiss-cpu==1.8.0
+# bitsandbytes is intentionally omitted from the pinned Windows requirements
+# because upstream wheels are Linux-focused. Install it separately on Linux
+# only when running 4-bit/8-bit quantized fine-tuning.

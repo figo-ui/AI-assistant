@@ -1,0 +1,1601 @@
+{
+  "cases": 40,
+  "top3_pass_count": 40,
+  "risk_pass_count": 40,
+  "image_pass_count": 5,
+  "search_pass_count": 10,
+  "image_cases": 5,
+  "search_cases": 10,
+  "top3_pass_rate": 1.0,
+  "risk_pass_rate": 1.0,
+  "image_pass_rate": 1.0,
+  "search_pass_rate": 1.0,
+  "mean_top_probability": 0.5104,
+  "emergency_cases": 20,
+  "emergency_flag_high_or_urgent": 20,
+  "emergency_flag_rate": 1.0,
+  "covid_bias_unrelated_top3_hits": 1,
+  "results": [
+    {
+      "name": "kidney_fever_persistent",
+      "input": "i feel pain on my back down and minimum fever for long time around kidney",
+      "analysis_text": "i feel pain on my back down and minimum fever for long time around kidney",
+      "detected_language": "en",
+      "top3": [
+        "Urinary tract infection",
+        "Impetigo",
+        "Viral sinusitis (disorder)"
+      ],
+      "text_top3": [
+        "Urinary tract infection",
+        "Impetigo",
+        "Viral sinusitis (disorder)"
+      ],
+      "confidence": 0.5705,
+      "risk_level": "Medium",
+      "needs_urgent_care": true,
+      "recommendation": "Possible kidney infection pattern: arrange same-day in-person evaluation with urine testing.",
+      "expected_top3": [
+        "Urinary tract infection"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "i feel pain on my back down and minimum fever for long time around kidney"
+    },
+    {
+      "name": "lower_uti",
+      "input": "burning urination with lower abdomen pain and frequent urine",
+      "analysis_text": "burning urination with lower abdomen pain and frequent urine",
+      "detected_language": "en",
+      "top3": [
+        "Urinary tract infection",
+        "Drug Reaction",
+        "Jaundice"
+      ],
+      "text_top3": [
+        "Urinary tract infection",
+        "Drug Reaction",
+        "Jaundice"
+      ],
+      "confidence": 0.45,
+      "risk_level": "Medium",
+      "needs_urgent_care": false,
+      "recommendation": "Likely urinary tract symptom pattern: arrange same-day or next-day clinic assessment.",
+      "expected_top3": [
+        "Urinary tract infection"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "burning urination with lower abdomen pain and frequent urine"
+    },
+    {
+      "name": "stroke_fast",
+      "input": "severe headache with one side weakness and slurred speech",
+      "analysis_text": "severe headache with one side weakness and slurred speech",
+      "detected_language": "en",
+      "top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "text_top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "confidence": 0.3627,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible stroke pattern: call emergency services or go to the emergency department immediately.",
+      "expected_top3": [
+        "Stroke",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "severe headache with one side weakness and slurred speech"
+    },
+    {
+      "name": "acs",
+      "input": "chest pain with trouble breathing and sweating",
+      "analysis_text": "chest pain with trouble breathing and sweating",
+      "detected_language": "en",
+      "top3": [
+        "Heart attack",
+        "Unstable angina",
+        "Possible NSTEMI / STEMI"
+      ],
+      "text_top3": [
+        "Heart attack",
+        "Unstable angina",
+        "Possible NSTEMI / STEMI"
+      ],
+      "confidence": 0.4308,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible cardiac emergency pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Heart attack",
+        "Unstable angina",
+        "Possible NSTEMI / STEMI"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "chest pain with trouble breathing and sweating"
+    },
+    {
+      "name": "chemical_rash",
+      "input": "itchy red skin rash on my hand after chemical exposure",
+      "analysis_text": "itchy red skin rash on my hand after chemical exposure",
+      "detected_language": "en",
+      "top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Acne"
+      ],
+      "text_top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Acne"
+      ],
+      "confidence": 0.3083,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Likely irritant/allergic skin pattern: avoid the trigger and arrange routine clinical review if symptoms persist.",
+      "expected_top3": [
+        "Allergy",
+        "Drug Reaction"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "itchy red skin rash on my hand after chemical exposure"
+    },
+    {
+      "name": "pneumonia",
+      "input": "fever cough chest pain when breathing",
+      "analysis_text": "fever cough chest pain when breathing",
+      "detected_language": "en",
+      "top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "text_top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "confidence": 0.5226,
+      "risk_level": "Medium",
+      "needs_urgent_care": true,
+      "recommendation": "Possible pneumonia pattern: urgent same-day assessment is recommended.",
+      "expected_top3": [
+        "Pneumonia"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "fever cough chest pain when breathing"
+    },
+    {
+      "name": "viral_uri",
+      "input": "sore throat runny nose mild cough and low fever",
+      "analysis_text": "sore throat runny nose mild cough and low fever",
+      "detected_language": "en",
+      "top3": [
+        "Acute viral pharyngitis (disorder)",
+        "Common Cold",
+        "Viral pharyngitis"
+      ],
+      "text_top3": [
+        "Acute viral pharyngitis (disorder)",
+        "Common Cold",
+        "Viral pharyngitis"
+      ],
+      "confidence": 0.1527,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Likely mild viral upper-respiratory pattern: monitor symptoms and seek care if they worsen or persist.",
+      "expected_top3": [
+        "Common Cold",
+        "Viral pharyngitis",
+        "Acute viral pharyngitis (disorder)",
+        "Viral sinusitis (disorder)"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "sore throat runny nose mild cough and low fever"
+    },
+    {
+      "name": "panic_attack_like",
+      "input": "sudden chest tightness with fear and fast heartbeat but no fever",
+      "analysis_text": "sudden chest tightness with fear and fast heartbeat but no fever",
+      "detected_language": "en",
+      "top3": [
+        "Panic attack",
+        "Autism spectrum disorder",
+        "Conversion disorder"
+      ],
+      "text_top3": [
+        "Panic attack",
+        "Autism spectrum disorder",
+        "Conversion disorder"
+      ],
+      "confidence": 0.4965,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Low-risk pattern: monitor symptoms and seek care if symptoms worsen or persist.",
+      "expected_top3": [
+        "Panic attack"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "sudden chest tightness with fear and fast heartbeat but no fever"
+    },
+    {
+      "name": "anaphylaxis",
+      "input": "allergy after food with lip swelling throat swelling and trouble breathing",
+      "analysis_text": "allergy after food with lip swelling throat swelling and trouble breathing",
+      "detected_language": "en",
+      "top3": [
+        "Anaphylaxis",
+        "Suspected COVID-19",
+        "COVID-19"
+      ],
+      "text_top3": [
+        "Anaphylaxis",
+        "Suspected COVID-19",
+        "COVID-19"
+      ],
+      "confidence": 0.74,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible anaphylaxis pattern: use emergency services immediately.",
+      "expected_top3": [
+        "Anaphylaxis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "allergy after food with lip swelling throat swelling and trouble breathing"
+    },
+    {
+      "name": "meningitis",
+      "input": "high fever severe headache stiff neck confusion and light sensitivity",
+      "analysis_text": "high fever severe headache stiff neck confusion and light sensitivity",
+      "detected_language": "en",
+      "top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Migraine"
+      ],
+      "text_top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Migraine"
+      ],
+      "confidence": 0.72,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible meningitis pattern: emergency evaluation is required immediately.",
+      "expected_top3": [
+        "Possible meningitis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "high fever severe headache stiff neck confusion and light sensitivity"
+    },
+    {
+      "name": "appendicitis",
+      "input": "right lower abdomen pain with fever vomiting and loss of appetite",
+      "analysis_text": "right lower abdomen pain with fever vomiting and loss of appetite",
+      "detected_language": "en",
+      "top3": [
+        "Possible appendicitis",
+        "Urinary tract infection",
+        "Peptic ulcer diseae"
+      ],
+      "text_top3": [
+        "Possible appendicitis",
+        "Urinary tract infection",
+        "Peptic ulcer diseae"
+      ],
+      "confidence": 0.62,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible appendicitis pattern: urgent in-person evaluation is required today.",
+      "expected_top3": [
+        "Possible appendicitis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "right lower abdomen pain with fever vomiting and loss of appetite"
+    },
+    {
+      "name": "ectopic_pregnancy",
+      "input": "missed period with pregnancy lower abdominal pain vaginal bleeding and fainting",
+      "analysis_text": "missed period with pregnancy lower abdominal pain vaginal bleeding and fainting",
+      "detected_language": "en",
+      "top3": [
+        "Normal pregnancy",
+        "Possible ectopic pregnancy",
+        "Jaundice"
+      ],
+      "text_top3": [
+        "Normal pregnancy",
+        "Possible ectopic pregnancy",
+        "Jaundice"
+      ],
+      "confidence": 0.33,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible ectopic pregnancy pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Possible ectopic pregnancy",
+        "Normal pregnancy"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "missed period with pregnancy lower abdominal pain vaginal bleeding and fainting"
+    },
+    {
+      "name": "dka",
+      "input": "diabetes with vomiting deep breathing fruity breath and confusion",
+      "analysis_text": "diabetes with vomiting deep breathing fruity breath and confusion",
+      "detected_language": "en",
+      "top3": [
+        "Diabetes",
+        "Possible diabetic ketoacidosis",
+        "Gastroenteritis"
+      ],
+      "text_top3": [
+        "Diabetes",
+        "Possible diabetic ketoacidosis",
+        "Gastroenteritis"
+      ],
+      "confidence": 0.33,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible diabetic ketoacidosis pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Possible diabetic ketoacidosis",
+        "Diabetes"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "diabetes with vomiting deep breathing fruity breath and confusion"
+    },
+    {
+      "name": "gi_bleed",
+      "input": "black stool and vomiting blood with dizziness",
+      "analysis_text": "black stool and vomiting blood with dizziness",
+      "detected_language": "en",
+      "top3": [
+        "Peptic ulcer diseae",
+        "Possible gastrointestinal bleed",
+        "Cervical spondylosis"
+      ],
+      "text_top3": [
+        "Peptic ulcer diseae",
+        "Possible gastrointestinal bleed",
+        "Cervical spondylosis"
+      ],
+      "confidence": 0.32,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible gastrointestinal bleeding pattern: seek urgent emergency evaluation immediately.",
+      "expected_top3": [
+        "Possible gastrointestinal bleed",
+        "Peptic ulcer diseae"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "black stool and vomiting blood with dizziness"
+    },
+    {
+      "name": "bowel_obstruction",
+      "input": "severe abdominal pain with vomiting cannot pass gas and severe bloating",
+      "analysis_text": "severe abdominal pain with vomiting cannot pass gas and severe bloating",
+      "detected_language": "en",
+      "top3": [
+        "Possible bowel obstruction",
+        "Jaundice",
+        "Peptic ulcer diseae"
+      ],
+      "text_top3": [
+        "Possible bowel obstruction",
+        "Jaundice",
+        "Peptic ulcer diseae"
+      ],
+      "confidence": 0.62,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible bowel obstruction pattern: urgent emergency evaluation is required.",
+      "expected_top3": [
+        "Possible bowel obstruction"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "severe abdominal pain with vomiting cannot pass gas and severe bloating"
+    },
+    {
+      "name": "epiglottitis",
+      "input": "high fever drooling muffled voice cannot swallow and trouble breathing",
+      "analysis_text": "high fever drooling muffled voice cannot swallow and trouble breathing",
+      "detected_language": "en",
+      "top3": [
+        "Epiglottitis",
+        "Malaria",
+        "Jaundice"
+      ],
+      "text_top3": [
+        "Epiglottitis",
+        "Malaria",
+        "Jaundice"
+      ],
+      "confidence": 0.7,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible airway emergency pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Epiglottitis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "high fever drooling muffled voice cannot swallow and trouble breathing"
+    },
+    {
+      "name": "pulmonary_embolism",
+      "input": "chest pain shortness of breath with calf pain and leg swelling",
+      "analysis_text": "chest pain shortness of breath with calf pain and leg swelling",
+      "detected_language": "en",
+      "top3": [
+        "Acute pulmonary embolism (disorder)",
+        "Pulmonary embolism",
+        "Heart attack"
+      ],
+      "text_top3": [
+        "Acute pulmonary embolism (disorder)",
+        "Pulmonary embolism",
+        "Heart attack"
+      ],
+      "confidence": 0.32,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible pulmonary embolism pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Pulmonary embolism",
+        "Acute pulmonary embolism (disorder)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "chest pain shortness of breath with calf pain and leg swelling"
+    },
+    {
+      "name": "pneumothorax",
+      "input": "sudden chest pain with sudden breathlessness and trouble breathing",
+      "analysis_text": "sudden chest pain with sudden breathlessness and trouble breathing",
+      "detected_language": "en",
+      "top3": [
+        "Spontaneous pneumothorax",
+        "Heart attack",
+        "Conversion disorder"
+      ],
+      "text_top3": [
+        "Spontaneous pneumothorax",
+        "Heart attack",
+        "Conversion disorder"
+      ],
+      "confidence": 0.62,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible pneumothorax pattern: seek emergency evaluation immediately.",
+      "expected_top3": [
+        "Spontaneous pneumothorax"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "sudden chest pain with sudden breathlessness and trouble breathing"
+    },
+    {
+      "name": "sepsis",
+      "input": "fever chills infection with confusion and very weak low blood pressure",
+      "analysis_text": "fever chills infection with confusion and very weak low blood pressure",
+      "detected_language": "en",
+      "top3": [
+        "Sepsis caused by virus (disorder)",
+        "Allergy",
+        "Alcoholic hepatitis"
+      ],
+      "text_top3": [
+        "Sepsis caused by virus (disorder)",
+        "Allergy",
+        "Alcoholic hepatitis"
+      ],
+      "confidence": 0.7,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible sepsis pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Sepsis caused by virus (disorder)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "fever chills infection with confusion and very weak low blood pressure"
+    },
+    {
+      "name": "severe_asthma",
+      "input": "asthma wheezing and trouble breathing cannot speak full sentences",
+      "analysis_text": "asthma wheezing and trouble breathing cannot speak full sentences",
+      "detected_language": "en",
+      "top3": [
+        "Bronchial Asthma",
+        "Bronchospasm / acute asthma exacerbation",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "text_top3": [
+        "Bronchial Asthma",
+        "Bronchospasm / acute asthma exacerbation",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "confidence": 0.32,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible severe asthma exacerbation: emergency treatment may be required immediately.",
+      "expected_top3": [
+        "Bronchospasm / acute asthma exacerbation",
+        "Bronchial Asthma"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "asthma wheezing and trouble breathing cannot speak full sentences"
+    },
+    {
+      "name": "melanoma_photo",
+      "input": "dark irregular mole getting larger and changing color",
+      "analysis_text": "dark irregular mole getting larger and changing color",
+      "detected_language": "en",
+      "top3": [
+        "melanoma",
+        "melanocytic nevus",
+        "Diabetes"
+      ],
+      "text_top3": [
+        "Diabetes",
+        "Jaundice",
+        "Autism spectrum disorder"
+      ],
+      "confidence": 0.8503,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Urgent: seek immediate in-person medical care or emergency services.",
+      "expected_top3": [
+        "melanoma"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2",
+      "image_model_version": "regression-mock-image-v1",
+      "modality_weights": {
+        "text": 0.0724,
+        "image": 0.9276
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "dark irregular mole getting larger and changing color"
+    },
+    {
+      "name": "contact_dermatitis_photo",
+      "input": "itchy red rash after detergent and chemical exposure on the hands",
+      "analysis_text": "itchy red rash after detergent and chemical exposure on the hands",
+      "detected_language": "en",
+      "top3": [
+        "contact dermatitis",
+        "chemical burn",
+        "Allergy"
+      ],
+      "text_top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Hypothyroidism"
+      ],
+      "confidence": 0.7005,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Low-risk pattern: monitor symptoms and seek care if symptoms worsen or persist.",
+      "expected_top3": [
+        "contact dermatitis",
+        "chemical burn"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2",
+      "image_model_version": "regression-mock-image-v1",
+      "modality_weights": {
+        "text": 0.1243,
+        "image": 0.8757
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "itchy red rash after detergent and chemical exposure on the hands"
+    },
+    {
+      "name": "cellulitis_photo",
+      "input": "painful warm spreading red area on leg with fever",
+      "analysis_text": "painful warm spreading red area on leg with fever",
+      "detected_language": "en",
+      "top3": [
+        "cellulitis",
+        "contact dermatitis",
+        "Impetigo"
+      ],
+      "text_top3": [
+        "Impetigo",
+        "Chicken pox",
+        "Arthritis"
+      ],
+      "confidence": 0.8205,
+      "risk_level": "Medium",
+      "needs_urgent_care": false,
+      "recommendation": "Schedule a same-day or next-day clinic visit for professional assessment.",
+      "expected_top3": [
+        "cellulitis"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2",
+      "image_model_version": "regression-mock-image-v1",
+      "modality_weights": {
+        "text": 0.0782,
+        "image": 0.9218
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "painful warm spreading red area on leg with fever"
+    },
+    {
+      "name": "psoriasis_photo",
+      "input": "chronic dry thick scaly plaques on elbows and knees",
+      "analysis_text": "chronic dry thick scaly plaques on elbows and knees",
+      "detected_language": "en",
+      "top3": [
+        "psoriasis",
+        "eczema",
+        "Viral sinusitis (disorder)"
+      ],
+      "text_top3": [
+        "Viral sinusitis (disorder)",
+        "Normal pregnancy",
+        "Bronchiolitis"
+      ],
+      "confidence": 0.8076,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Low-risk pattern: monitor symptoms and seek care if symptoms worsen or persist.",
+      "expected_top3": [
+        "psoriasis"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2",
+      "image_model_version": "regression-mock-image-v1",
+      "modality_weights": {
+        "text": 0.08,
+        "image": 0.92
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "chronic dry thick scaly plaques on elbows and knees"
+    },
+    {
+      "name": "fungal_ring_photo",
+      "input": "itchy circular rash with scaling that keeps spreading",
+      "analysis_text": "itchy circular rash with scaling that keeps spreading",
+      "detected_language": "en",
+      "top3": [
+        "fungal infection",
+        "eczema",
+        "Fungal infection"
+      ],
+      "text_top3": [
+        "Fungal infection",
+        "Autism spectrum disorder",
+        "Acne"
+      ],
+      "confidence": 0.7855,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Low-risk pattern: monitor symptoms and seek care if symptoms worsen or persist.",
+      "expected_top3": [
+        "fungal infection"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2",
+      "image_model_version": "regression-mock-image-v1",
+      "modality_weights": {
+        "text": 0.0819,
+        "image": 0.9181
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "itchy circular rash with scaling that keeps spreading"
+    },
+    {
+      "name": "am_heart_attack",
+      "input": "\u12e8\u12f0\u1228\u1275 \u1205\u1218\u121d \u12a5\u1293 \u12e8\u1218\u1270\u1295\u1348\u1235 \u127d\u130d\u122d \u12a0\u1208\u129d",
+      "analysis_text": "chest pain \u12a5\u1293 shortness of breath \u12a0\u1208\u129d",
+      "detected_language": "am",
+      "top3": [
+        "Heart attack",
+        "Unstable angina",
+        "Possible NSTEMI / STEMI"
+      ],
+      "text_top3": [
+        "Heart attack",
+        "Unstable angina",
+        "Possible NSTEMI / STEMI"
+      ],
+      "confidence": 0.4306,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible cardiac emergency pattern: seek emergency care immediately.",
+      "expected_top3": [
+        "Heart attack",
+        "Possible NSTEMI / STEMI"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "chest pain \u12a5\u1293 shortness of breath \u12a0\u1208\u129d"
+    },
+    {
+      "name": "am_stroke",
+      "input": "\u12a8\u134d\u1270\u129b \u1275\u12a9\u1233\u1275 \u1233\u12ed\u1206\u1295 \u12a0\u1295\u12f5 \u130e\u1295 \u12f5\u12ab\u121d \u12a5\u1293 \u1295\u130d\u130d\u122d \u127d\u130d\u122d \u12a0\u1208\u129d",
+      "analysis_text": "high fever \u1233\u12ed\u1206\u1295 one side weakness \u12a5\u1293 slurred speech \u12a0\u1208\u129d",
+      "detected_language": "am",
+      "top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "text_top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "confidence": 0.3627,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible stroke pattern: call emergency services or go to the emergency department immediately.",
+      "expected_top3": [
+        "Stroke",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "high fever \u1233\u12ed\u1206\u1295 one side weakness \u12a5\u1293 slurred speech \u12a0\u1208\u129d"
+    },
+    {
+      "name": "am_uti",
+      "input": "\u121b\u1243\u1320\u120d \u123d\u1295\u1275 \u12a5\u1293 \u1275\u12a9\u1233\u1275 \u12a0\u1208\u129d",
+      "analysis_text": "burning urination \u12a5\u1293 fever \u12a0\u1208\u129d",
+      "detected_language": "am",
+      "top3": [
+        "Urinary tract infection",
+        "Drug Reaction",
+        "Normal pregnancy"
+      ],
+      "text_top3": [
+        "Urinary tract infection",
+        "Drug Reaction",
+        "Normal pregnancy"
+      ],
+      "confidence": 0.4354,
+      "risk_level": "Medium",
+      "needs_urgent_care": false,
+      "recommendation": "Likely urinary symptom pattern: arrange a same-day or next-day clinic visit for urine testing and treatment guidance.",
+      "expected_top3": [
+        "Urinary tract infection"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "burning urination \u12a5\u1293 fever \u12a0\u1208\u129d"
+    },
+    {
+      "name": "am_viral_uri",
+      "input": "\u12e8\u1309\u122e\u122e \u1205\u1218\u121d \u12a5\u1293 \u12a0\u134d\u1295\u132b \u134d\u1233\u123d \u12a5\u1293 \u1233\u120d \u12a0\u1208\u129d",
+      "analysis_text": "sore throat \u12a5\u1293 runny nose \u12a5\u1293 cough \u12a0\u1208\u129d",
+      "detected_language": "am",
+      "top3": [
+        "Acute viral pharyngitis (disorder)",
+        "Common Cold",
+        "Viral pharyngitis"
+      ],
+      "text_top3": [
+        "Acute viral pharyngitis (disorder)",
+        "Common Cold",
+        "Viral pharyngitis"
+      ],
+      "confidence": 0.1527,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Likely mild viral upper-respiratory pattern: monitor symptoms and seek care if they worsen or persist.",
+      "expected_top3": [
+        "Common Cold",
+        "Viral pharyngitis"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "sore throat \u12a5\u1293 runny nose \u12a5\u1293 cough \u12a0\u1208\u129d"
+    },
+    {
+      "name": "am_chemical_rash",
+      "input": "\u123d\u134d\u1273 \u12a5\u1293 \u121b\u1233\u12a8\u12ad \u12a8\u12ac\u121a\u12ab\u120d \u1260\u128b\u120b \u1270\u12a8\u1230\u1270",
+      "analysis_text": "rash \u12a5\u1293 itchy \u12a8 chemical \u1260\u128b\u120b \u1270\u12a8\u1230\u1270",
+      "detected_language": "am",
+      "top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Acne"
+      ],
+      "text_top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Acne"
+      ],
+      "confidence": 0.2988,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Likely irritant/allergic skin pattern: avoid the trigger and arrange routine clinical review if symptoms persist.",
+      "expected_top3": [
+        "Allergy",
+        "Drug Reaction"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [],
+      "redaction_entities": [],
+      "external_query": "rash \u12a5\u1293 itchy \u12a8 chemical \u1260\u128b\u120b \u1270\u12a8\u1230\u1270"
+    },
+    {
+      "name": "search_malaria_ethiopia",
+      "input": "latest malaria Ethiopia 2026 high fever chills headache after mosquito bites",
+      "analysis_text": "latest malaria Ethiopia 2026 high fever chills headache after mosquito bites",
+      "detected_language": "en",
+      "top3": [
+        "Malaria",
+        "Typhoid",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "text_top3": [
+        "Malaria",
+        "Typhoid",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "confidence": 0.539,
+      "risk_level": "Medium",
+      "needs_urgent_care": true,
+      "recommendation": "Urgent: seek immediate in-person medical care or emergency services.",
+      "expected_top3": [
+        "Malaria"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "latest malaria Ethiopia [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_pneumonia_guideline",
+      "input": "current pneumonia guideline 2026 fever cough chest pain when breathing",
+      "analysis_text": "current pneumonia guideline 2026 fever cough chest pain when breathing",
+      "detected_language": "en",
+      "top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "text_top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "confidence": 0.5227,
+      "risk_level": "Medium",
+      "needs_urgent_care": true,
+      "recommendation": "Possible pneumonia pattern: urgent same-day assessment is recommended.",
+      "expected_top3": [
+        "Pneumonia"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "current pneumonia guideline [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_stroke_guideline",
+      "input": "latest stroke guideline 2026 severe headache one side weakness and slurred speech",
+      "analysis_text": "latest stroke guideline 2026 severe headache one side weakness and slurred speech",
+      "detected_language": "en",
+      "top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "text_top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "confidence": 0.3628,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible stroke pattern: call emergency services or go to the emergency department immediately.",
+      "expected_top3": [
+        "Stroke",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "latest stroke guideline [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_meningitis_outbreak",
+      "input": "current outbreak meningitis Ethiopia 2026 high fever severe headache stiff neck confusion",
+      "analysis_text": "current outbreak meningitis Ethiopia 2026 high fever severe headache stiff neck confusion",
+      "detected_language": "en",
+      "top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Malaria"
+      ],
+      "text_top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Malaria"
+      ],
+      "confidence": 0.72,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible meningitis pattern: emergency evaluation is required immediately.",
+      "expected_top3": [
+        "Possible meningitis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "current outbreak meningitis Ethiopia [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_dermatitis_update",
+      "input": "new current guideline itchy red rash after chemical exposure on hands",
+      "analysis_text": "new current guideline itchy red rash after chemical exposure on hands",
+      "detected_language": "en",
+      "top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Hypothyroidism"
+      ],
+      "text_top3": [
+        "Allergy",
+        "Drug Reaction",
+        "Hypothyroidism"
+      ],
+      "confidence": 0.2979,
+      "risk_level": "Low",
+      "needs_urgent_care": false,
+      "recommendation": "Likely irritant/allergic skin pattern: avoid the trigger and arrange routine clinical review if symptoms persist.",
+      "expected_top3": [
+        "Allergy",
+        "Drug Reaction"
+      ],
+      "expected_risk": "Low",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [],
+      "external_query": "new current guideline itchy red rash after chemical exposure on hands"
+    },
+    {
+      "name": "search_redacted_name",
+      "input": "my name is John Doe latest malaria Ethiopia 2026 fever chills headache",
+      "analysis_text": "my name is John Doe latest malaria Ethiopia 2026 fever chills headache",
+      "detected_language": "en",
+      "top3": [
+        "Malaria",
+        "Paralysis (brain hemorrhage)",
+        "Hypertension"
+      ],
+      "text_top3": [
+        "Malaria",
+        "Paralysis (brain hemorrhage)",
+        "Hypertension"
+      ],
+      "confidence": 0.5399,
+      "risk_level": "Medium",
+      "needs_urgent_care": false,
+      "recommendation": "Schedule a same-day or next-day clinic visit for professional assessment.",
+      "expected_top3": [
+        "Malaria"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION",
+        "NAME"
+      ],
+      "external_query": "[REDACTED_NAME] latest malaria Ethiopia [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_redacted_email",
+      "input": "email me at patient@example.com current pneumonia guideline 2026 fever cough chest pain",
+      "analysis_text": "email me at patient@example.com current pneumonia guideline 2026 fever cough chest pain",
+      "detected_language": "en",
+      "top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "text_top3": [
+        "Pneumonia",
+        "COVID-19",
+        "Suspected COVID-19"
+      ],
+      "confidence": 0.5227,
+      "risk_level": "Medium",
+      "needs_urgent_care": true,
+      "recommendation": "Possible pneumonia pattern: urgent same-day assessment is recommended.",
+      "expected_top3": [
+        "Pneumonia"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "EMAIL_ADDRESS",
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "email me at [REDACTED_EMAIL_ADDRESS] current pneumonia guideline [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_redacted_phone",
+      "input": "call 202-555-0189 latest stroke guideline 2026 severe headache one side weakness slurred speech",
+      "analysis_text": "call 202-555-0189 latest stroke guideline 2026 severe headache one side weakness slurred speech",
+      "detected_language": "en",
+      "top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "text_top3": [
+        "Paralysis (brain hemorrhage)",
+        "Stroke",
+        "Hypoglycemia"
+      ],
+      "confidence": 0.3628,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible stroke pattern: call emergency services or go to the emergency department immediately.",
+      "expected_top3": [
+        "Stroke",
+        "Paralysis (brain hemorrhage)"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION",
+        "PHONE_NUMBER"
+      ],
+      "external_query": "call [REDACTED_PHONE_NUMBER] latest stroke guideline [REDACTED_GEOGRAPHIC_LOCATION]"
+    },
+    {
+      "name": "search_amharic_guideline",
+      "input": "\u12c8\u1263 \u12a2\u1275\u12ee\u1335\u12eb latest 2026 \u1275\u12a9\u1233\u1275 \u12a5\u1293 \u1265\u122d\u12f5 \u1265\u122d\u12f5",
+      "analysis_text": "malaria ethiopia latest 2026 fever \u12a5\u1293 \u1265\u122d\u12f5 \u1265\u122d\u12f5",
+      "detected_language": "am",
+      "top3": [
+        "Malaria",
+        "Chicken pox",
+        "Impetigo"
+      ],
+      "text_top3": [
+        "Malaria",
+        "Chicken pox",
+        "Impetigo"
+      ],
+      "confidence": 0.5507,
+      "risk_level": "Medium",
+      "needs_urgent_care": false,
+      "recommendation": "Schedule a same-day or next-day clinic visit for professional assessment.",
+      "expected_top3": [
+        "Malaria"
+      ],
+      "expected_risk": "Medium",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "GEOGRAPHIC_LOCATION"
+      ],
+      "external_query": "malaria ethiopia latest [REDACTED_GEOGRAPHIC_LOCATION]\u12a5\u1293 \u1265\u122d\u12f5 \u1265\u122d\u12f5"
+    },
+    {
+      "name": "search_redacted_date",
+      "input": "on 03/08/2026 I had latest meningitis outbreak Ethiopia high fever severe headache stiff neck confusion",
+      "analysis_text": "on 03/08/2026 I had latest meningitis outbreak Ethiopia high fever severe headache stiff neck confusion",
+      "detected_language": "en",
+      "top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Malaria"
+      ],
+      "text_top3": [
+        "Possible meningitis",
+        "Arthritis",
+        "Malaria"
+      ],
+      "confidence": 0.72,
+      "risk_level": "High",
+      "needs_urgent_care": true,
+      "recommendation": "Possible meningitis pattern: emergency evaluation is required immediately.",
+      "expected_top3": [
+        "Possible meningitis"
+      ],
+      "expected_risk": "High",
+      "top3_pass": true,
+      "risk_pass": true,
+      "image_pass": true,
+      "search_pass": true,
+      "redaction_pass": true,
+      "fusion_version": "fusion-v2-text-only",
+      "image_model_version": "none",
+      "modality_weights": {
+        "text": 1.0,
+        "image": 0.0
+      },
+      "search_sources": [
+        "MockSearch"
+      ],
+      "redaction_entities": [
+        "DATE"
+      ],
+      "external_query": "on [REDACTED_DATE] I had latest meningitis outbreak Ethiopia high fever severe headache stiff neck confusion"
+    }
+  ]
+}
