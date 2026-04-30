@@ -1,8 +1,8 @@
-# AI Healthcare Assistant
+# AI Healthcare Chatbot System
 
-A full-stack multilingual healthcare assistant chatbot with symptom triage, image analysis, and clinical guidance.
+**Advisor:** Mr. Alemu Gudeta | **Contact:** 0919778608
 
-**Stack:** Django 5 · React 18 · PostgreSQL · Redis · PyTorch · scikit-learn
+A full-stack, bilingual AI-powered healthcare assistant that uses machine learning to analyze symptoms, predict possible conditions, score risk levels, and guide users to the nearest healthcare facility.
 
 ---
 
@@ -13,37 +13,62 @@ A full-stack multilingual healthcare assistant chatbot with symptom triage, imag
 | Tool | Version |
 |------|---------|
 | Python | 3.10+ |
-| Node.js | 18+ |
 | PostgreSQL | 14+ |
-| Redis | 6+ |
+| Node.js | 18+ (only if using the React frontend) |
+| Redis | 6+ (optional — needed for async jobs and caching) |
 
----
-
-### 1 — Backend
+### 1 — Clone and set up the backend
 
 ```bash
-cd backend
-python -m venv .venv
+git clone https://github.com/figo-ui/AI-assistant.git
+cd AI-assistant/backend
 
+python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS / Linux
 source .venv/bin/activate
 
 pip install -r requirements.txt
+```
 
-# Copy and fill in environment variables
+### 2 — Configure environment
+
+```bash
 copy .env.example .env      # Windows
 cp .env.example .env        # macOS/Linux
+```
 
+Open `.env` and set at minimum:
+
+```env
+DJANGO_SECRET_KEY=your-50-char-random-secret
+DB_NAME=chat-bot
+DB_USERNAME=postgres
+DB_PASSWORD=your-postgres-password
+GOOGLE_MAPS_API_KEY=AIzaSyDXDoa_VBI5h9KuoTUs-rQF8Ve4qHxWu5M
+```
+
+### 3 — Set up the database
+
+Make sure PostgreSQL is running and the database `chat-bot` exists, then:
+
+```bash
 python manage.py migrate
 python manage.py seed_admin --username admin --email admin@example.com --password Admin1234
+```
+
+### 4 — Run the server
+
+```bash
 python manage.py runserver
 ```
 
-Backend runs at → `http://127.0.0.1:8000`
+Open your browser at **http://127.0.0.1:8000** — the plain HTML/CSS/JS frontend is served directly by Django.
 
-Start the async worker in a second terminal:
+### 5 — (Optional) Start the async worker
+
+Required only for background analysis jobs:
 
 ```bash
 python scripts/run_rq_worker.py
@@ -51,131 +76,111 @@ python scripts/run_rq_worker.py
 
 ---
 
-### 2 — Frontend
+## Project Structure
 
-```bash
-cd frontend
-npm install
-npm run dev
 ```
-
-Frontend runs at → `http://127.0.0.1:5173`
-
-Production build:
-
-```bash
-npm run build
-npm run preview
+AI-assistant/
+├── backend/                        Django REST API
+│   ├── guidance/                   Main app
+│   │   ├── models.py               Database models
+│   │   ├── views.py                API endpoints
+│   │   ├── urls.py                 URL routing
+│   │   ├── serializers.py          Request/response validation
+│   │   └── services/               ML pipeline services
+│   │       ├── pipeline.py         Main inference orchestrator
+│   │       ├── text_model.py       Symptom → condition classifier
+│   │       ├── image_model.py      Skin CNN inference
+│   │       ├── fusion.py           Text + image fusion engine
+│   │       ├── risk.py             Risk scoring engine
+│   │       ├── clinical_safety.py  Emergency pattern overrides
+│   │       ├── facilities.py       Google Places + local DB lookup
+│   │       ├── language_support.py Bilingual EN/Amharic support
+│   │       └── pii_redaction.py    PHI redaction (Presidio)
+│   ├── models/                     Trained ML artifacts
+│   │   ├── text_classifier.joblib
+│   │   ├── tfidf_vectorizer.joblib
+│   │   ├── text_labels.json
+│   │   ├── dialogue_intent_classifier.joblib
+│   │   └── skin_cnn_torch.pt
+│   ├── scripts/                    Training and utility scripts
+│   │   ├── retrain_all_models.py   One-shot retraining
+│   │   └── quick_retrain.py        Fast text model retrain
+│   └── requirements.txt
+│
+├── frontend_html/                  Plain HTML/CSS/JS frontend
+│   ├── index.html                  Single entry point
+│   ├── css/                        Stylesheets
+│   └── js/
+│       ├── app.js                  Main controller
+│       ├── api/                    API client modules
+│       ├── components/             UI components
+│       └── pages/                  Page renderers
+│
+├── data/                           Training datasets (not committed)
+├── docker-compose.yml
+└── README.md
 ```
 
 ---
 
-### 3 — Docker (full stack)
+## API Reference
+
+Base URL: `http://localhost:8000/api/v1/`
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/health/` | None | Health check |
+| POST | `/auth/register/` | None | Register new user |
+| POST | `/auth/login/` | None | Login |
+| POST | `/auth/refresh/` | Cookie | Refresh JWT tokens |
+| POST | `/auth/logout/` | JWT | Logout |
+| GET/PATCH | `/profile/` | JWT | User profile |
+| GET/POST | `/chat/sessions/` | JWT | Chat sessions |
+| POST | `/chat/sessions/{id}/analyze/` | JWT | Symptom analysis |
+| GET | `/location/nearby/` | None | Find nearby facilities |
+| GET | `/location/emergency/` | None | Emergency contacts |
+| GET | `/admin/analytics/` | Staff | Platform analytics |
+
+---
+
+## Retraining the Models
+
+### Text model (CPU, ~5 minutes)
+
+```bash
+cd backend
+python scripts/retrain_all_models.py --text-only
+```
+
+Uses `data/unified/ULTIMATE_TRIAGE_KNOWLEDGE.csv` (43,621 rows, 202 conditions).
+
+### All models
+
+```bash
+python scripts/retrain_all_models.py
+```
+
+### After retraining — run regression tests
+
+```bash
+python scripts/run_triage_regression.py
+```
+
+Expected: 40/40 top-3 pass, 40/40 risk pass, 20/20 emergency flag.
+
+---
+
+## Docker
 
 ```bash
 cp backend/.env.example backend/.env   # fill in values
 docker-compose up --build
 ```
 
-Services:
-- `backend` → `http://localhost:8000`
-- `frontend` → `http://localhost:5173`
-- `postgres` → port 5432
-- `redis` → port 6379
-
----
-
-## Environment Variables
-
-Copy `backend/.env.example` to `backend/.env` and set:
-
-| Variable | Description |
-|----------|-------------|
-| `DJANGO_SECRET_KEY` | 50+ char random string (required in production) |
-| `DJANGO_DEBUG` | `false` in production |
-| `DJANGO_ALLOWED_HOSTS` | Comma-separated hostnames |
-| `DB_NAME`, `DB_USERNAME`, `DB_PASSWORD` | PostgreSQL credentials |
-| `REDIS_URL` | Redis connection string |
-| `GOOGLE_MAPS_API_KEY` | Optional — enables live facility search |
-| `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD` | SMTP credentials for email verification |
-
-See `backend/.env.example` for the full list.
-
----
-
-## API Reference
-
-Base path: `http://localhost:8000/api/v1/`
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/health/` | Health check |
-| POST | `/auth/register/` | Register user |
-| POST | `/auth/login/` | Login |
-| POST | `/auth/refresh/` | Refresh JWT |
-| POST | `/auth/logout/` | Logout |
-| GET/PATCH | `/profile/` | User profile |
-| GET/POST | `/chat/sessions/` | Chat sessions |
-| POST | `/chat/sessions/{id}/analyze/` | Symptom analysis (text + image) |
-| GET | `/chat/history/` | Chat history |
-| GET | `/chat/export/` | Export history (JSON/CSV) |
-| POST | `/analyze/` | Public anonymous analysis |
-| GET | `/location/nearby/` | Nearby facilities |
-| GET | `/location/emergency/` | Emergency contacts |
-| GET | `/admin/analytics/` | Admin analytics |
-
-Full API documentation: see `CLIENT_HANDOFF_PACK.md`
-
----
-
-## Model Artifacts
-
-Place trained model files in `backend/models/`:
-
-| File | Description |
-|------|-------------|
-| `text_classifier.joblib` | Symptom → condition classifier (113 classes) |
-| `tfidf_vectorizer.joblib` | TF-IDF vectorizer |
-| `text_labels.json` | Label index |
-| `dialogue_intent_classifier.joblib` | Dialogue intent classifier |
-| `dialogue_intent_vectorizer.joblib` | Dialogue vectorizer |
-| `dialogue_response_templates.json` | Response templates |
-| `skin_cnn_torch.pt` | Dermatology CNN (PyTorch) |
-| `image_labels.json` | Image class labels |
-
-> Model binaries are excluded from git. Download from the shared model registry or retrain using `backend/scripts/`.
-
----
-
-## Project Structure
-
-```
-├── backend/                  # Django REST API
-│   ├── guidance/             # Main app (models, views, services)
-│   │   └── services/         # ML pipeline, triage, RAG, safety
-│   ├── healthcare_ai/        # Django settings & routing
-│   ├── models/               # Trained model artifacts (gitignored)
-│   ├── scripts/              # Training & utility scripts
-│   └── requirements.txt
-├── frontend/                 # React + TypeScript UI
-│   └── src/
-│       └── features/         # auth, chat, facilities, profile, admin
-├── deployment_package/       # Docker inference service
-├── CLIENT_HANDOFF_PACK.md    # Full delivery documentation
-└── docker-compose.yml
-```
-
----
-
-## Known Limitations
-
-- Image model (DermaMNIST) is prototype-grade (F1: 0.31) — not for clinical use
-- System output is decision support only, not a clinical diagnosis
-- Commercial deployment requires dataset license review (see `CLIENT_HANDOFF_PACK.md §6`)
-- Production hardening (TLS, reverse proxy, CI/CD) is not included
+Services: backend (8000), postgres (5432), redis (6379)
 
 ---
 
 ## License
 
-See `CLIENT_HANDOFF_PACK.md` for dataset license notes and usage restrictions.
+See `CLIENT_HANDOFF_PACK.md` for dataset license notes.

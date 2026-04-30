@@ -1,0 +1,36 @@
+/* ── Tablet ─────────────────────────────────────────────────── */
+@media (max-width: 1080px) {
+  .chat-shell,
+  .chat-shell.sidebar-collapsed {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: min(300px, 84vw);
+    transform: translateX(-100%);
+    z-index: 30;
+    transition: transform .24s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .mobile-only { display: inline-flex !important; }
+  .main-content { padding: 0.6rem; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .tab-nav { grid-template-columns: 1fr 1fr; }
+  .row-2, .row-3 { grid-template-columns: 1fr; }
+  .bubble { max-width: calc(100% - 46px); }
+  .composer { bottom: 0.4rem; }
+  .scroll-fab { bottom: 10rem; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .data-table th:nth-child(n+4),
+  .data-table td:nth-child(n+4) { display: none; }
+  .message-stream { max-height: calc(100vh - 360px); }
+  .feature-badges { gap: 0.5rem; font-size: 0.78rem; }
+}
+
+/* ── Desktop — hide mobile-only elements ───────────────────── */
+.mobile-only { display: none; }

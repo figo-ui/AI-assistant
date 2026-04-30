@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthAI – AI Healthcare Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- AUTH SCREEN -->
+  <div id="auth-screen" class="page auth-page"></div>
+
+  <!-- MAIN APP -->
+  <div id="app-screen" class="page app-page" style="display:none">
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+    <div id="chat-shell" class="chat-shell">
+      <aside id="sidebar" class="sidebar"></aside>
+      <section class="main-panel">
+        <header id="main-header" class="main-header sticky"></header>
+        <section class="main-content" id="main-content"></section>
+      </section>
+    </div>
+    <div id="app-toast" class="app-toast" style="display:none"></div>
+    <div id="settings-modal" class="settings-modal-backdrop" style="display:none"></div>
+  </div>
+
+  <!-- JS modules — order matters -->
+  <script src="js/utils/helpers.js"></script>
+  <script src="js/utils/toast.js"></script>
+  <script src="js/api/client.js"></script>
+  <script src="js/api/auth.js"></script>
+  <script src="js/api/chat.js"></script>
+  <script src="js/api/facilities.js"></script>
+  <script src="js/api/admin.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/composer.js"></script>
+  <script src="js/components/messageCard.js"></script>
+  <script src="js/components/analysisCard.js"></script>
+  <script src="js/components/settingsModal.js"></script>
+  <script src="js/pages/authPage.js"></script>
+  <script src="js/pages/chatPage.js"></script>
+  <script src="js/pages/guidancePage.js"></script>
+  <script src="js/pages/facilitiesPage.js"></script>
+  <script src="js/pages/profilePage.js"></script>
+  <script src="js/pages/adminPage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
